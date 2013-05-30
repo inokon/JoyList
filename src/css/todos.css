@@ -22,7 +22,7 @@ body {
     font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.4em;
     background: #1ABC9C url('../images/bg0.png');
-    color: #4d4d4d;
+    color: #2C3E50;
     width: 300px;
     margin: 0 auto;
     -webkit-font-smoothing: antialiased;
@@ -465,13 +465,17 @@ label[for='toggle-all'] {
 }
 
 #credits {
-    color: #888;
+    color: #ECF0F1;
     text-align: center;
     padding-top: 25px;
 }
 
 #credits a {
     color: #888;
+}
+
+#credits h2 {
+    text-align: left;
 }
 
 .content {
