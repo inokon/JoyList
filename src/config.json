@@ -15,9 +15,19 @@
 		"media": true,
 		"prefs": true,
 		"request": {
-			"permissions": ["http://*/*", "https://*/*"]
+			"permissions": [
+				"http://*/*",
+				"https://*/*"
+			]
 		},
 		"tools": true,
-		"reload": true
+		"reload": true,
+		"icons": {
+			"android": {
+				"36": "images/android_icon_36.png",
+				"48": "images/android_icon_48.png",
+				"72": "images/android_icon_72.png"
+			}
+		}
 	}
 }

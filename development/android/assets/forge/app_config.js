@@ -1,6 +1,6 @@
 window.forge = {}; window.forge.config = {
     "author": "inokon@gmail.com", 
-    "config_hash": "9933ee378667bd9d28afaff73d6d0bbb6704d6ee", 
+    "config_hash": "45d801fd2de2a177e8084a07469a7ba3851ffcdf", 
     "config_version": "4", 
     "core": {
         "android": {
@@ -38,6 +38,16 @@ window.forge = {}; window.forge.config = {
             "hash": "notahash"
         }, 
         "file": {
+            "hash": "notahash"
+        }, 
+        "icons": {
+            "config": {
+                "android": {
+                    "36": "images/android_icon_36.png", 
+                    "48": "images/android_icon_48.png", 
+                    "72": "images/android_icon_72.png"
+                }
+            }, 
             "hash": "notahash"
         }, 
         "media": {

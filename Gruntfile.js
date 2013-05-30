@@ -22,7 +22,7 @@ module.exports = function (grunt) {
       livereload: {
         options: {
           port: 7770,
-          base: '.',
+          base: 'src/',
           middleware: function (connect, options) {
             return [lrSnippet, folderMount(connect, options.base)];
           }
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
         tasks: ['livereload']
       },
       css: {
-        files: 'src/css/styles.css',
+        files: 'src/css/*',
         tasks: ['livereload']
       },
       js: {
