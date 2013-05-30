@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head><script src='../forge/app_config.js'></script><script src='../forge/all.js'></script>
+    <meta charset="utf-8">
+    <title>JoyList- 90DaysofPlay</title>
+    <link href="css/todos.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/underscore-1.1.6.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.1.15.min.js"></script>
+    <script src="js/todos.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Todo App Interface -->
+
+    <div id="todoapp">
+      <div class="title">
+        <h1>Joy List</h1>
+      </div>
+
+      <div class="content">
+      </div>
+    </div>
+
+    <div id="credits">
+      The Joylist is for people taking the 90 Days of Play Challenge. You can use this app to build your list of things that make you feel joyful. 
+
+      If you run out of ideas consider the following prompts: 
+      <ul align ="left">
+        <li>What have you always dreamed of doing?</li>
+        <li>What is on your bucket list?</li>
+        <li>What do you like doing with others?</li>
+        <li>What would your inner 5 year old want to do?</li>
+        <li>What makes you go weeeeeee!?</li>
+        <li>What activities involve each of your five senses?</li>
+        <li>What makes you feel totally free?</li>
+        <li>What makes you feel close to God?</li>
+        <li>What makes you feel sexy?</li>
+        <li>What makes feels decadent?</li>
+        <li>What makes time fly by?</li>
+        <li>What makes you laugh?</li>
+        <li>What service do you enjoy doing for other people?</li>
+
+      </ul>
+      <br /><br />This app is powered by <a href="https://www.parse.com">Parse</a> and Trigger.io.
+    </div>
+
+    <!-- Templates -->
+
+    <script type="text/template" id="login-template">
+      <header id="header"></header>
+      <div class="login">
+        <form class="login-form">
+          <h2>Log In</h2>
+          <div class="error" style="display:none"></div>
+          <input type="text" id="login-username" placeholder="Username" />
+          <input type="password" id="login-password" placeholder="Password" />
+          <button>Log In</button>
+        </form>
+
+        <form class="signup-form">
+          <h2>New here? Create an account!</h2>
+          <div class="error" style="display:none"></div>
+          <input type="text" id="signup-username" placeholder="Username" />
+          <input type="password" id="signup-password" placeholder="Create a Password" />
+          <button>Sign Up</button>
+        </form>
+      </div>
+    </script>
+
+    <script type="text/template" id="manage-todos-template">
+      <div id="user-info">
+        Signed in as <%= Parse.User.current().get("username") %> (<a href="#" class="log-out">Log out</a>)
+      </div>
+
+      <div class="section">
+
+        <header id="header">
+          <input id="new-todo" placeholder="What activity makes you feel happy?" type="text" />
+        </header>
+
+        <div id="main">
+          <input id="toggle-all" type="checkbox">
+          <label for="toggle-all">Mark all as complete</label>
+          
+          <ul id="todo-list">
+            <img src='images/spinner.gif' class='spinner' />
+          </ul>
+        </div>
+
+        <div id="todo-stats"></div>
+      </div>
+    </script>
+
+    <script type="text/template" id="item-template">
+      <li class="<%= done ? 'completed' : '' %>">
+	<div class="view">
+	  <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %>>
+	  <label class="todo-content"><%= content %></label>
+	  <button class="todo-destroy"></button>
+	</div>
+	<input class="edit" value="<%= content %>">
+      </li>
+    </script>
+
+    <script type="text/template" id="stats-template">
+      <footer id="footer">
+	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining == 1 ? 'item' : 'items' %> left</span>
+	<ul id="filters">
+	  <li>
+	    <a href="javascript:void(0)" id="all" class="selected">All</a>
+	  </li>
+	  <li>
+	    <a href="javascript:void(0)" id="active">Active</a>
+	  </li>
+	  <li>
+	    <a href="javascript:void(0)" id="completed">Completed</a>
+	  </li>
+	</ul>
+	<button id="clear-completed">Clear completed (<%= done %>)</button>
+      </footer>
+    </script>
+
+  </body>
+
+</html>
