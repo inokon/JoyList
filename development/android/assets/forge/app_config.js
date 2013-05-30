@@ -1,6 +1,6 @@
 window.forge = {}; window.forge.config = {
     "author": "inokon@gmail.com", 
-    "config_hash": "45d801fd2de2a177e8084a07469a7ba3851ffcdf", 
+    "config_hash": "6b49106f1799660cb93de259c90a52a8a3954621", 
     "config_version": "4", 
     "core": {
         "android": {
@@ -26,6 +26,7 @@ window.forge = {}; window.forge.config = {
         }
     }, 
     "description": "An empty app created by default", 
+    "homepage": "http://www.joyaplay.com", 
     "json_safe_name": "JoyList", 
     "logging": {
         "level": "DEBUG"

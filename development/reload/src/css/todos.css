@@ -23,7 +23,7 @@ body {
     line-height: 1.4em;
     background: #1ABC9C url('../images/bg0.png');
     color: #4d4d4d;
-    width: 550px;
+    width: 300px;
     margin: 0 auto;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -67,9 +67,9 @@ body {
 
 #todoapp h1 {
     position: absolute;
-    top: -120px;
+    top: -80px;
     width: 100%;
-    font-size: 70px;
+    font-size: 35px;
     font-weight: bold;
     text-align: center;
     color: #888;
@@ -115,7 +115,7 @@ body {
     position: relative;
     margin: 0;
     width: 100%;
-    font-size: 24px;
+    font-size: 12px;
     font-family: inherit;
     line-height: 1.4em;
     border: 0;
@@ -196,7 +196,7 @@ label[for='toggle-all'] {
 #todo-list li {
     text-align: left;
     position: relative;
-    font-size: 24px;
+    font-size: 12px;
     border-bottom: 1px dotted #ccc;
 }
 
@@ -350,6 +350,7 @@ label[for='toggle-all'] {
     position: absolute;
     right: 0;
     left: 0;
+    margin-top: 30px;
 }
 
 #filters li {
@@ -415,6 +416,7 @@ label[for='toggle-all'] {
     font-weight: normal;
     font-size: 25px;
     margin-bottom: 20px;
+    margin-left: 45px;
 }
 
 #todoapp .content .login input {
@@ -422,8 +424,11 @@ label[for='toggle-all'] {
     margin-bottom: 10px;
     font-size: 20px;
     padding: 5px;
-    width: 340px;;
+    width: 200px;
+    margin-left: 45px;
 }
+
+
 
 #todoapp .content .login .signup-form {
     margin-top: 25px;
@@ -437,6 +442,7 @@ label[for='toggle-all'] {
     border-radius: 5px;
     margin-bottom: 25px;
     font-family: "Helvetica Neue";
+    margin-left: 45px;
 }
 
 #todoapp .content .login .error {
@@ -468,3 +474,6 @@ label[for='toggle-all'] {
     color: #888;
 }
 
+.content {
+    max-width: 100%;
+}
