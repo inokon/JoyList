@@ -1,15 +1,20 @@
 {
-	"general": {},
-	"ios": {
-		"profiles": {
-			"DEFAULT": {}
-		},
-		"simulatorsdk": "6.0",
-		"simulatorfamily": "iphone"
-	},
-	"android": {
-		"profiles": {
-			"DEFAULT": {}
-		}
-	}
+    "android": {
+        "profiles": {
+            "DEFAULT": {
+                "keystore": "/Users/angelinokon/Documents/keystore/JoyaPlay_Keystore.keystore", 
+                "keypass": "5087joyaplay1977", 
+                "keyalias": "JoyaPlay_Keystore", 
+                "storepass": "5087joyaplay1977"
+            }
+        }
+    }, 
+    "ios": {
+        "simulatorsdk": "6.0", 
+        "simulatorfamily": "iphone", 
+        "profiles": {
+            "DEFAULT": {}
+        }
+    }, 
+    "general": {}
 }
